@@ -792,7 +792,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 30% 0 0 0px;
+  margin: 107px 0 0 0px;
   gap: 20px;
   width: 100%;
   overflow: hidden;
@@ -1139,7 +1139,7 @@ header h1.Hero-heading {
 }
 .carousel-container {
   position: relative;
-  margin: 12% 0 12% 0;
+  margin: 3% 0 12% 0;
   text-align: center;
   justify-content: center;
   width: 100%;
@@ -6999,3 +6999,4 @@ label {
   }
 
 }
+
