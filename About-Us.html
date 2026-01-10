@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & M Computers</title>
+    <meta name="description" content="Buy reliable computers and laptops on 'H & M Computers'. An E-commerce website solely and proudly created by 'Hamza Aijaz Qidwai'.">
+    <link rel="canonical" href="https://techcare.com/">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <!-- Load font stylesheet directly (non-blocking with display=swap) -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+.footer {
+  margin-bottom: 40px;
+}
+.logo-loader {
+  position: fixed;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  z-index: 111111;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #0f143d;
+}
+.logo-loader h1 {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+.text {
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: transparent;
+
+  /* FILLABLE WAVE */
+ background:
+  radial-gradient(0.9em at 50% 1.2em, #6ec1ff 98%, transparent 102%)
+    0 0 / 2.2em 200% repeat-x,
+  radial-gradient(0.9em at 50% -0.6em, #ff9c3d 98%, transparent 102%)
+    0 1.6em / 2.2em 200% repeat-x;
+animation: waveFill 2s infinite linear;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.text span {
+  margin-left: 4px;
+}
+@keyframes waveFill {
+  from {
+    background-position:
+      100% 100%,   /* bottom-left */
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0%,    /* top-center */
+      50% 0%;
+  }
+  to {
+    background-position:
+      0% 100%, /* bottom-right */
+      0% 100%;
+  }
+}
+.content {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    visibility: hidden;
+}
+    .disabler {
+      background-color: gray;
+      color: #fff;
+    }
+    #alert {
+      display: none;
+      background-color: #60e665;
+      padding: 10px 25px;
+      border-radius: 15px;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999999;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-align: center;
+      border: 1px solid #000;
+      box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .hideondesk {
+      display: none;
+    }
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+  margin-top: 92px;
+}
+    </style>
+</head>
+<body>
+  <!-- Loader Element -->
+<div class="logo-loader">
+  <span class="text">T<span>C</span></span>
+  <h1>Tech Care By Hamza N Muzammil</h1>
+</div>
+<!-- End of Loader Element -->
+<!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+<div class="content">
+  <header class="navbar">
+    <img src="Images/favicon.ico" class="logo" loading="lazy">
+    <h1 class="Hero-heading"><a style="color: #fff;" href="index.html">Tech Care</a></h1>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <!-- User Account Icon -->
+      <div class="parallelicons">
+        <div class="user-account" id="user-panel">
+          <img id="img4user" src="Images/User-icon2.png" title="For accessing user-panel" alt="user-account icon" loading="lazy">
+        </div>
+        <!--Add to cart button-->
+        <div id="heroImage" class="cartbtn">
+          <img src="Images/bagB.png" id="add2CartBtn2" width="28" height="28" alt="cart icon" class="hideontab" title="Cart containing your added products">
+          <p id="p4qty">0</p>
+        </div>
+      <!-- Theme Mode Toggle Btn -->
+        <label class="theme-switch" title="Change body theme">
+        <input type="checkbox" id="toggleTheme">
+        <span class="slider">
+          <span class="icon" id="modeIcon">🌞</span>
+        </span>
+        </label>
+      </div>
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="search-container2">
+    <button class="search-icon" id="searchToggle">
+      <img src="Images/search.webp" width="25px" height="25px" loading="eager" title="search your products..." alt="search icon">
+    </button>
+
+    <div class="search-box" id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <span class="clear-btn" id="clearBtn">×</span>
+    </div>
+  </div>
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>Hamza Aijaz</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span> Apki Details</li>
+      <li><span class="icon">❤️</span> Favourites</li>
+      <li><span class="icon">📍</span> Addresses</li>
+      <li><span class="icon">🔔</span> Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+
+  <div class="container1">
+    <h1 class="Hea4About">About Us</h1>
+    <div class="containerA">
+      <div class="pouch4About">
+        <h1 class="Text4About">
+            Lets get familiar with each other!
+        </h1>
+        <p class="Para4About">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium cum officiis totam ea quisquam 
+            distinctio error quae a. Saepe alias eveniet nobis tenetur dolor animi deleniti necessitatibus sint vitae?
+        </p>
+      </div> 
+        <img class="Img4About" src="Images/3d character4About.webp" width="auto" height="auto" loading="lazy">
+    </div>
+  </div> 
+    <section class="Cscontainer">
+            <h2>Our Corporate Clients!</h2>  
+      <div class="CCcontainer">
+            <img src="Images/PakCollege-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">
+            <img src="Images/Aptech-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">
+            <img src="Images/Salsoft-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">
+            <img src="Images/Contour-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">
+            <img src="Images/Daraz-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">
+            <img src="Images/TSS-icon.png" width="auto" height="auto" alt="icon1" loading="lazy">     
+      </div>
+    </section>
+
+  <div class="Help">
+    <div class="Main-headingP">
+    <h1>What Makes Us</h1>
+    <h2>Unique</h2>
+    </div>
+    <div class="sales">
+      <h3>See Why People Have Trust On Us</h3>
+      <div class="sales-card">
+        <div class="benefits">
+          <h4>Quality Products @ Best Prices</h4>
+          <p>We ensure that we always give the best product with good condition at best price of the city to the customer.</p>
+        </div>
+        <div class="benefits">
+          <h4>Negotiable Behaviour</h4>
+          <p>Customers loves our 'negotiable behaviour' towards dealing with them and we also suggest them the right product according to their budget & requirements.</p>
+        </div>
+        <div class="benefits">
+          <h4>Prompt Sales Service</h4>
+          <p>Whenever our customers reach us incase of facing any issue in their machines after making a purchase from us, we promptly provide support to fix all issues disturbing their experience.</p>
+        </div>
+      </div>
+    </div>
+    <div class="newsletter">
+        <h3>Subscribe to our newsletter</h3>
+      <div class="containerP">
+        <p>Stay updated with our latest arrivals of laptops, computers, monitors and much more... by entering your email address below, thank you!</p>
+    <div class="emailtype">
+      <form id="subscribe-form" method="post">
+        <input type="email" name="email" placeholder="Type your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+      </div>
+    </div>
+  </div>
+<div id="alert"></div>
+<script>
+const form = document.getElementById("subscribe-form");
+const alertBox = document.getElementById("alert");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // prevent default form submission
+
+      const formData = new FormData(form);
+      const email = formData.get("email");
+
+      // Send request to PHP without reloading page
+      const response = await fetch("Subscribe.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const text = await response.text();
+
+      // Show alert with response
+      alertBox.textContent = text;
+      alertBox.style.display = "flex";
+
+      // Auto-hide alert after 3 seconds
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 3000);
+
+      // Clear form input
+      form.reset();
+    });
+</script>
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span><img src="Images/bagB.png" width="24" height="24" alt="shopping bag icon"> CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p id="emptyCartMessage" class="empty-cart-msg">🛒 Your cart is empty!</p>
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">Rs.0</span></p>
+    <div class="cart-buttons">
+      <button id="checker" class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!-- Alert message box starts -->
+<div class="alert-box"></div>
+<!-- Alert message box ends -->
+ <!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" title="click here to chat with us on whatsapp..." onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsapp-icon.webp" loading="lazy" alt="WhatsApp Chat">
+</a>
+<!--Scroll to Top Button-->
+<button class="btn4scroll" id="scroll2top" onclick="scrollToTop()" title="click here to go to the top of the page."><i class="fa-solid fa-angle-up"></i> Top</button>
+
+<!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - We Care Your Tech</h2>
+      <p>Quality products, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.webp" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.webp" width="auto" height="auto" loading="lazy"><p>+92 332 3715253</p>
+      
+      <img src="Images/LocationF.webp" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+</div>
+<script>
+  (() => {
+  const currentUrl = new URL(window.location.href);
+
+  if (currentUrl.pathname.includes('.html')) {
+    currentUrl.pathname = currentUrl.pathname.split('.html')[0] + '.html';
+    currentUrl.search = '';
+    currentUrl.hash = '';
+
+    if (currentUrl.href !== window.location.href) {
+      window.location.replace(currentUrl.href);
+    }
+  }
+})();
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loading');
+  // Hide loader after content is loaded
+  setTimeout(() => {
+    document.body.classList.remove('loading');
+    const loader = document.querySelector(".logo-loader");
+    loader.style.display = "none";
+    const content = document.querySelector(".content");
+    content.style.visibility = "visible";
+  }, 2000); // Adjust the timeout duration as needed
+});
+const wrapper = document.querySelector('.CCcontainer');
+const images = wrapper.querySelectorAll('img');
+
+wrapper.addEventListener('mouseenter', () => {
+    images.forEach((img, index) => {
+      // Clear previous animation class in case of re-entry
+      img.classList.remove('animate');
+
+      // Add delay per image
+      setTimeout(() => {
+        img.classList.add('animate');
+      }, index * 300); // 300ms delay per image
+    });
+  });
+
+  // Optional: Reset when mouse leaves
+  wrapper.addEventListener('mouseleave', () => {
+    images.forEach(img => {
+      img.classList.remove('animate');
+      img.style.transform = 'scale(1)';
+    });
+  });
+  // For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.body; // ✅ Use body directly
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    body.classList.remove('dark-mode'); // make sure light mode resets
+    toggle.checked = false;
+    icon.textContent = '🌞';
+  }
+});
+// For Custom Mouse Trailing Effect
+document.addEventListener("mousemove", (e) => {
+const trail = document.querySelector(".cursor-trail");
+  const x = e.clientX;
+  const y = e.clientY;
+  trail.style.transform = `translate(${x}px, ${y}px)`;
+});
+const cartSidebar = document.getElementById("cartSidebar");
+const sidebar = document.querySelector(".sidebar");
+const shopping = document.querySelector('.hideontab');
+const shoppingq = document.getElementById("p4qty");
+const accountimg = document.getElementById('img4user');
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+// Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartBtn1 = document.getElementById("add2CartBtn1");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const checkitout = document.getElementById('checker');
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const cartCount = document.getElementById('p4qty');
+  const alertBox = document.querySelector('.alert-box');
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // 🔄 Always sync counter on page load
+  updateCartCount();
+  renderCart();
+
+  // ADD TO CART
+  function addToCart(product) {
+    const existing = cart.find(
+      it => it.title === product.title && it.color === product.color
+    );
+
+    if (existing) {
+      existing.quantity += product.quantity;
+    } else {
+      cart.push(product);
+    }
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+  }
+
+  function updateCartCount() {
+  const cartStored = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQty = cartStored.reduce((sum, item) => sum + item.quantity, 0);
+  cartCount.innerText = totalQty;
+}
+
+  function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    return fetch("save_cart.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cart)
+    })
+    .catch(err => console.error("Save cart error:", err));
+  }
+function loadCart() {
+  fetch("load_cart.php")
+    .then(res => res.json())
+    .then(data => {
+      if (Array.isArray(data)) {
+        cart = data;
+        renderCart();
+      }
+    })
+    .catch(err => console.error("Load cart error:", err));
+}
+checkitout.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const cartvalue = Number(
+    cartTotal.textContent.replace(/[^0-9]/g, '')
+  );
+
+  saveCart().then(() => {
+
+    if (cartvalue >= 25000 && cartvalue <= 200000) {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "✅ Your cart has been saved successfully and you are now redirecting to the checkout page...";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+          window.location.href = "checkout.php";
+        }, 2000);
+      } else {
+        window.location.href = "checkout.php";
+      }
+    } else {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "⚠️ Minimum cart value should be Rs. 25,000 and Maximum Rs. 200,000 to proceed to checkout.";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+        }, 3000);
+      }
+    }
+  });
+});
+  // ✅ Render cart items dynamically
+  function renderCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = `<p class="empty-cart-msg">🛒 Your cart is empty!</p>`;
+      cartTotal.textContent = "Rs. 0";
+
+      checkitout.classList.add("disabler");
+      checkitout.disabled = true;
+
+      updateCartCount();
+      return;
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <div class="cart-item-details">
+          <p class="item-title"><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button class="qty-minus ${item.quantity === 1 ? 'is-min' : ''}" onclick="changeQty(${i}, -1)" aria-disabled="${item.quantity === 1}">−</button>
+            <span class="item-qty">${item.quantity}</span>
+            <button class="qty-plus ${item.quantity === 10 ? 'is-max' : ''}" onclick="changeQty(${i}, 1)" aria-disabled="${item.quantity === 10}">+</button>
+          </div>
+          <div class="row4pr">
+          <p class="item-price">Rs ${(item.price * item.quantity).toLocaleString('en-IN')} only</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+          </div>
+      `;
+      cartItems.appendChild(div);
+    });
+
+    const indianFormat = total.toLocaleString('en-IN');
+
+    cartTotal.textContent = "Rs. " + indianFormat + " only";
+
+    checkitout.disabled = false;
+    checkitout.classList.remove("disabler");
+
+    updateCartCount();
+  }
+// ✅ Change quantity with validation
+    window.changeQty = function (index, delta) {
+  const item = cart[index];
+  let newQty = item.quantity + delta;
+
+  if (newQty > 10) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Max 10 items allowed.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+
+  if (newQty < 1) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Add at least one item.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+
+  item.quantity = newQty;
+  saveCart();
+  renderCart();
+  updateCartCount();
+};
+
+  window.removeItem = function (index) {
+    cart.splice(index, 1);
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+};
+  // ✅ Handle product buttons dynamically
+  document.querySelectorAll(".product-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const product = {
+        title: card.dataset.name || "Unnamed",
+        price: parseFloat(card.dataset.price) || 0,
+        image: card.dataset.image || "https://via.placeholder.com/80",
+        color: card.dataset.color || "Default",
+        quantity: 1
+      };
+      if (!product.title || isNaN(product.price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart(product);
+      cartSidebar.classList.add("open");
+    });
+  });
+  // ✅ Open sidebar from static buttons
+  if (addToCartBtn1) {
+    addToCartBtn1.addEventListener("click", () => {
+      cartSidebar.classList.toggle("open");
+    });
+  }
+  const shoppingq = document.getElementById("p4qty");
+  if (addToCartBtn2) {
+    addToCartBtn2.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+    });
+  }
+  if (accountimg) {
+    accountimg.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+    });
+  }
+  // ✅ Close sidebar
+  if (closeCart) {
+    closeCart.addEventListener("click", () => {
+      cartSidebar.classList.remove("open");
+    });
+  }
+  loadCart();
+});
+// ✅ Close cart if user clicks outside the sidebar 
+document.addEventListener("click", (event) => {
+
+  if (cartSidebar.classList.contains("open")) {
+    if (
+      !cartSidebar.contains(event.target) &&
+      !event.target.closest("#add2CartBtn2") &&
+      !event.target.closest(".product-card button") &&
+      !event.target.closest(".remove-item") &&
+      !event.target.closest(".qty-controls") // ✅ fixed line
+    ) {
+      cartSidebar.classList.remove("open");
+    }
+  }
+});
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

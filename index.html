@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Care By Hamza N Muzammil</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <link rel="canonical" href="https://techcare.com/">
+  <meta name="description" content="Buy reliable computers and laptops from 'Tech Care'. An E-commerce website solely and proudly created by 'Hamza Aijaz Qidwai'.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Load font stylesheet directly (non-blocking with display=swap) -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="script.js" defer></script>
+<style>
+.footer {
+  margin-bottom: 40px;
+}
+/* --- Features Section Layout --- */
+.features-section {
+    display: flex; /* Enables flexbox for the main container */
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center;
+    gap: 30px; /* Space between the cards */
+    max-width: 100%; /* Limits the max width of the section */
+    margin: 0; /* Centers the section on the page */
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* --- Individual Feature Card Style --- */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allows the cards to grow and take equal space */
+  background-color: #ffffff; /* White background as seen in the image */
+  border-radius: 10px; /* Rounded corners */
+  padding: 25px;
+  text-align: center; /* Centers the content within the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  min-height: 40vh;
+  border: 1px solid royalblue;
+}
+
+/* --- Feature Icon/Image Styling --- */
+.feature-icon {
+    width: 150px; /* Set a fixed size for the icon container */
+    height: 150px;
+    margin: 0 auto 20px; /* Center the icon container and add bottom margin */
+    /* Styles to create the circular white background with the image */
+    background-color: #ffffff;
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden; /* Important to keep the image within the circle */
+    border: 1px solid #eee; /* A light border for definition */
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle without stretching */
+    display: block;
+}
+/* --- Feature Title Styling --- */
+.feature-title {
+    font-weight: bold;
+    color: #000; /* Dark text color */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+/* --- Feature Description Styling --- */
+.feature-description {
+    font-size: 1rem;
+    color: #333; /* Slightly greyed-out text for body copy */
+    margin-bottom: 0;
+}
+.title4cards {
+  width: 100%;
+}
+@media (min-width: 220px) and (max-width: 767px) {
+    .features-section {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 0 0 15% 0;
+    }
+    .feature-description {
+      width: 70%;
+    }
+    .title4cards {
+      text-align: center;
+      font-size: 24px;
+      font-family: system-ui;
+      text-decoration: underline;
+      line-height: 36px;
+      width: 85%;
+    }
+    .text {
+      font-size: 5rem;
+    }
+    .parent4fcards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin: 5% 0;
+      width: 100%;
+      padding: 0 18px;
+      overflow: hidden;
+      column-gap: 3px;
+      row-gap: 6px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+    .features-section {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 12% 3%;
+    }
+    .feature-card {
+      flex: 1 1 40%; /* On small screens, stack cards vertically (100% width) */
+    }
+    .title4cards {
+      text-align: center;
+      font-size: 28px;
+      font-family: system-ui;
+      text-decoration: underline;
+      line-height: 42px;
+      margin-bottom: 3%;
+    }
+    .text {
+      font-size: 5.5rem;
+    }
+    .parent4fcards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .feature-title {
+      font-size: 20px;
+    }
+}
+@media (min-width: 1281px) {
+    .features-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .feature-card {
+      flex: 1 1 22%; /* On small screens, stack cards vertically (100% width) */
+    }
+    .title4cards {
+      text-align: center;
+      font-size: 36px;
+      font-family: system-ui;
+      text-decoration: underline;
+      line-height: 54px;
+    }
+    .text {
+      font-size: 7rem;
+    }
+    .parent4fcards {
+      margin: 0;
+      padding: 3% 3%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: fit-content;
+      gap: 12px;
+    }
+    .feature-title {
+      font-size: 22px;
+    }
+}
+.logo-loader {
+  position: fixed;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  z-index: 111111;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #0f143d;
+}
+.logo-loader h1 {
+  font-family: sans-serif;
+  color: #ffffff;
+  margin-top: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+.text {
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: transparent;
+
+  /* FILLABLE WAVE */
+ background:
+  radial-gradient(0.9em at 50% 1.2em, #6ec1ff 98%, transparent 102%)
+    0 0 / 2.2em 200% repeat-x,
+  radial-gradient(0.9em at 50% -0.6em, #ff9c3d 98%, transparent 102%)
+    0 1.6em / 2.2em 200% repeat-x;
+animation: waveFill 2s infinite linear;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.text span {
+  margin-left: 4px;
+}
+@media (min-width: 768px) {
+.add-to-wishlist {
+    background: transparent;
+    transition: transform 0.2s;
+}
+}
+@media (max-width: 767px) {
+.add-to-wishlist {
+    background: transparent;
+    transition: transform 0.2s;
+}
+}
+@keyframes waveFill {
+  from {
+    background-position:
+      100% 100%,   /* bottom-left */
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0%,    /* top-center */
+      50% 0%;
+  }
+  to {
+    background-position:
+      0% 100%, /* bottom-right */
+      0% 100%;
+  }
+}
+.content {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    visibility: hidden;
+}
+  .disabler {
+  background-color: gray;
+  color: #fff;
+}
+  .no-result-message {
+    width: 60%;
+    position: absolute;
+    margin: 0;
+    left: calc(50% - 33%);
+    height: fit-content;
+    background-color: #fff0c1;
+    display : none;
+    text-align : center;
+    color : #1e1e1e;
+    font-size : 1.1rem;
+    font-weight : 500;
+    line-height : 1.5;
+    padding : 15px;
+    background : #f9f9f9;
+    border-radius : 10px;
+    box-shadow : 0 2px 6px rgba(0,0,0,0.1);
+  }
+.qty-plus.is-max {
+  opacity: 0.5;
+  cursor: not-allowed; /* still clickable, but looks disabled */
+  transform: none;
+  pointer-events: auto; /* must remain clickable so onclick runs */
+}
+.qty-minus.is-min {
+  opacity: 0.5;
+  cursor: not-allowed; /* still clickable, but looks disabled */
+  transform: none;
+  pointer-events: auto; /* must remain clickable so onclick runs */
+}
+</style>
+</head>
+<body>
+  <!-- Loader Element -->
+<div class="logo-loader">
+  <span class="text">T<span>C</span></span>
+  <h1>Tech Care By Hamza N Muzammil</h1>
+</div>
+<!-- End of Loader Element -->
+<!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+<div class="content">
+  <header class="navbar">
+    <img src="Images/tech_care-logodesign.webp" class="logo" loading="lazy" alt="site's logo favicon">
+    <h1 class="Hero-heading"><a href="index.html">Tech Care</a></h1>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <!-- User Account Icon -->
+      <div class="parallelicons">
+        <div class="user-account" id="user-panel">
+          <img id="img4user" src="Images/User-icon2.png" title="For accessing user-panel" alt="user-account icon" loading="lazy">
+        </div>
+        <!--Add to cart button-->
+        <div id="heroImage" class="cartbtn">
+          <img src="Images/bagB.png" id="add2CartBtn2" width="28" height="28" alt="cart icon" class="hideontab" title="Cart containing your added products">
+          <p id="p4qty">0</p>
+        </div>
+      <!-- Theme Mode Toggle Btn -->
+        <label class="theme-switch" title="Change body theme">
+        <input type="checkbox" id="toggleTheme">
+        <span class="slider">
+          <span class="icon" id="modeIcon">🌞</span>
+        </span>
+        </label>
+      </div>
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="search-container2">
+    <button class="search-icon" id="searchToggle">
+      <img src="Images/search.webp" width="25px" height="25px" loading="eager" title="search your products..." alt="search icon">
+    </button>
+
+    <div class="search-box" id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <span class="clear-btn" id="clearBtn">×</span>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>${user_name}</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span>Account</li>
+      <li><span class="icon">❤️</span>Pending Orders</li>
+      <li><span class="icon">📍</span>Delivered Orders</li>
+      <li><span class="icon">📍</span>Wishlist</li>
+      <li><span class="icon">🔔</span>Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+  <!-- Hero Section -->
+  <div class="Slogan1">
+    <img src="Images/Banner-designM.webp" alt="Tech Care Banner Image" loading="eager">
+    <h1 style="font-family: sans-serif; letter-spacing: -2px;">We Care Your Tech.</h1>
+    <div class="buttonz">
+    <a href="#section4P" title="click to navigate to the products section"><button>View Products</button></a>
+    <a href="#howwework" title="click to navigate to the about section"><button>How We Work</button></a>
+    <a href="#buyersmessage" title="click to check our reviews"><button>Our Reviews</button></a>
+    </div>
+  </div>
+<!-- Image Slider Section -->
+  <section class="imgslider">
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="slide"><img src="Images/ImgC-1.webp" alt="Slide 1" loading="eager"></div>
+      <div class="slide"><img src="Images/ImgC-2.webp" alt="Slide 2" loading="eager"></div>
+      <div class="slide"><img src="Images/ImgC-3.webp" alt="Slide 3" loading="eager"></div>
+      <div class="slide"><img src="Images/ImgC-4.webp" alt="Slide 4" loading="eager"></div>
+      <div class="slide"><img src="Images/ImgC-5.webp" alt="Slide 5" loading="eager"></div>
+    </div>
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+  </div>
+</section>
+  <!-- Why Choose Us Section -->
+    <section id="WCU7">
+      <div class="container">
+          <h2>Why Choose Us ?</h2>
+          <div style="color: #fff;" class="texter-section">
+          <p>We are known for our significantly transparent charges and quality services among top tech-experts of the city!</p>
+          <div class="divider"><img src="Images/Divider-icon.webp" width="100" height="250" alt="divider-icon"></div>
+          <p>We help our customers in getting upgraded to the latest technologies which can easily cater their needs!</p>
+          </div>
+        <div class="Image-section">
+          <img class="imageM" src="Images/WCU Pic.webp" alt="An image showing the view of our business">
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section - End -->
+<div class="productscatalogue">
+      <h2 class="dm-serif-text-regular" id="Main-heading">Our Top Performing Categories</h2>
+      <div id="Categories"><a class="category-tab active" data-category="laptops" data-target="laptops" value="laptops"> Laptops </a><a class="category-tab" data-category="printers" data-target="printers" value="printers"> Printers </a><a class="category-tab" data-category="monitors" data-target="monitors" value="monitors"> Monitors </a><a class="category-tab" data-category="computers" data-target="computers" value="computers"> Computers </a></div>
+  <div class="parent4sort">
+    <div class="price-sorting">
+        <label for="sortPrice">Sort by Price:</label>
+        <select id="sortPrice">
+          <option value="Default" selected disabled>By Default</option>
+          <option value="lowToHigh">Low to High</option>
+          <option value="highToLow">High to Low</option>
+        </select>
+    </div>
+      <!-- Search Bar Section -->
+    <div class="search-container">
+      <input type="text" id="productSearch" placeholder="Search your product here" />
+      <button id="cleartext">&times;</button>
+    </div>
+  </div>
+</div>    
+<section id="section4P" class="products4P">
+<div class="no-result-message">
+"Sorry, the product you're looking for isn't available in our stock, but you can inquire about your item on our WhatsApp number given below: +92 332 3715253. Thanks for your patience!";
+</div>
+    <section class="products product-menu" id="laptops">
+    <!-- For Laptops catalogue -->
+        <div class="product-card" data-id="101" data-price="43000" data-name="Dell Latitude 5400 i5-7th gen" data-color="Black" data-image="Images/Dell 5400 laptop.png">
+        <img src="Images/Dell 5400 laptop.png" alt="Laptop 1">
+        <h3>Dell Latitude 5400 i5-7th gen</h3>
+        <ul class="p4des"><li>Top Selling Products</li><li>Best For Students</li><li>Supports High-End Tasks</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 43,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="101">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="102" data-price="55000" data-name="Dell Precision 7730 i5-8th gen" data-color="Black" data-image="Images/D-7730.webp">
+        <img src="Images/D-7730.webp" alt="Laptop 2">
+        <h3>Dell Precision 7730 i5-8th gen</h3>
+        <ul class="p4des"><li>Gaming PC with 4gb Nvidia Graphics Card</li><li>Best For Gamers</li><li>Refurbished Laptop</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 55,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="102">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="103" data-price="22500" data-name="Lenovo T430 i5-3rd gen" data-color="Black" data-image="Images/L-t430.png">
+        <img src="Images/L-t430.png" alt="Laptop 3">
+        <h3>Lenovo T430 i5-3rd gen</h3>
+        <ul class="p4des"><li>With Dual Battery</li><li>Best For Students & Teachers</li><li>U-Series Processor</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 22,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="103">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="104" data-price="115000" data-name="Hp 840 g7 i5-10th gen" data-color="Silver" data-image="Images/HP-840g7.png">
+        <img src="Images/HP-840g7.png" alt="Laptop 4">
+        <h3>Hp 840 g7 i5-10th gen</h3>
+        <ul class="p4des"><li>2gb Intel graphics card</li><li>Best For Teachers</li><li>Available in Silver color</li><li>Ligtweight</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 115,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="104">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="105" data-price="36000" data-name="Lenovo T470 i5-7th gen" data-color="Black" data-image="Images/Lenovo-T470.png">
+        <img src="Images/Lenovo-T470.png" alt="Laptop 3">
+        <h3>Lenovo T470 i5-7th gen</h3>
+        <ul class="p4des"><li>Ligtweight & Top Selling Model</li><li>Dual Battery installed</li><li>Refurbished Condition</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 36,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="105">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="106" data-price="105000" data-name="Dell Precision 3541 i5-9th gen" data-color="Black" data-image="Images/Dell Precision 3541.png">
+        <img src="Images/Dell Precision 3541.png" alt="Laptop 4">
+        <h3>Dell Precision 3541 i5-9th gen</h3>
+        <ul class="p4des"><li>Backlit Keyboard</li><li>Matte Silver Color</li><li>120Hz Refresh rate</li><li>Refurbished Condition</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 105,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="106">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="107" data-price="43000" data-name="Lenovo T480 i5-8th gen" data-color="Black" data-image="Images/Lenovo-T480.png">
+        <img src="Images/Lenovo-T480.png" alt="Laptop 5">
+        <h3>Lenovo T480 i5-8th gen</h3>
+        <ul class="p4des"><li>4gb graphics card</li><li>Best for Gamers</li><li>Touchscreen with Camera</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 43,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="107">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="108" data-price="65000" data-name="Dell Precision 3510 i5-10th gen" data-color="Navy Blue" data-image="Images/Dell 3510.png">
+        <img src="Images/Dell 3510.png" alt="Laptop 6">
+        <h3>Dell Precision 3510 i5-10th gen</h3>
+        <ul class="p4des"><li>Type-C charging port</li><li>Multi-tasking supported</li><li>Refurbished Condition</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag"> Rs 65,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="108">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a class="view-product" style="text-decoration: none;" href="productpage.php" target="_blank"><button title="click to view this product's details" id="btn4details"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+    </section>  
+    <section class="products product-menu" id="printers" style="display: none;">
+    <!-- For Printers catalogue -->
+        <div class="product-card" data-id="201" data-price="173000" data-name="Xerox WC-7535 Photocopier Machine" data-image="Images/Xerox printer.png">
+        <img src="Images/Xerox printer.png" alt="printer 1">
+        <h3>Xerox-WC-7535 Photocopier Machine</h3>
+        <ul class="p4des"><li>1 Month Warranty</li><li>Duplex Printing</li><li>USB Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 173,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="201">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="202" data-price="90000" data-name="Ricoh Aficio 301 Laserjet Printer" data-image="Images/Ricoh printer.png">
+        <img src="Images/Ricoh printer.png" alt="printer 2">
+        <h3>Ricoh Aficio 301 Laserjet Printer</h3>
+        <ul class="p4des"><li>Energy saving feature</li><li>Wireless Connectivity</li><li>IOT features</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 90,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="202">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="203" data-price="42400" data-name="Canon Inkjet PIXMA G1010" data-image="Images/Canon printer.png">
+        <img src="Images/Canon printer.png" alt="printer 3">
+        <h3>Canon Inkjet PIXMA G1010 Printer</h3>
+        <ul class="p4des"><li>300dpi borderless printing enabled</li><li>Duplex Printing supported</li><li>Wireless</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 41,400 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="203">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="204" data-price="65000" data-name="Hp Office-jet Pro 7720" data-image="Images/Hp printer.png">
+        <img src="Images/Hp printer.png" alt="printer 4">
+        <h3>Hp Office-jet Pro 7720 A3</h3>
+        <ul class="p4des"><li>600dpi borderless printing enabled</li><li>Wireless & Bluetooth Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 65,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="204">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="205" data-price="74000" data-name="Hp C2023LJB1 Color Laserjet Printer" data-image="Images/Hp Color Laserjet.png">
+        <img src="Images/Hp Color Laserjet.png" alt="printer 5">
+        <h3>HP Color Laserjet Printer C2023LJB1</h3>
+        <ul class="p4des"><li>1200dpi printing quality</li><li>Duplex Printing supported</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 74,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="205">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="206" data-price="62000" data-name="Epson EQ789J2H Color Inkjet Printer" data-image="Images/Epson Eco-tank L3250.png">
+        <img src="Images/Epson Eco-tank L3250.png" alt="printer 6">
+        <h3>Epson EQ789J2H Color Inkjet Printer</h3>
+        <ul class="p4des"><li>300dpi color & black print resolution</li><li>Wireless & Bluetooth Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 62,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="206">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="207" data-price="34000" data-name="Canon PIXMA TR-4550 Printer" data-image="Images/Canon-TR4550 Color Printer.png">
+        <img src="Images/Canon-TR4550 Color Printer.png" alt="printer 7">
+        <h3>Canon PIXMA TR-4550 Color Inkjet</h3>
+        <ul class="p4des"><li>600dpi print resolution</li><li>Wireless Connectivity</li><li>Best Color Results</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 34,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="207">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="208" data-price="68000" data-name="Hp 8600 Office-jet Pro Plus" data-image="Images/HP Officejet Pro 8600.webp">
+        <img src="Images/HP Officejet Pro 8600.webp" alt="printer 8">
+        <h3>Hp 8600 Office-jet Pro plus</h3>
+        <ul class="p4des"><li>300dpi color & black print resolution</li><li>USB Connectivity</li><li>150 sheets</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 68,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="208">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+    </section>
+    <section class="products product-menu" id="monitors" style="display: none;">
+    <!-- For Monitors catalogue -->
+      <div class="product-card" data-id="301" data-price="57500" data-name="Hp 5S24GHQ 24 inch LED Monitor Series 5" data-image="Images/Monitor pic-2.png">
+        <img src="Images/Monitor pic-2.png" alt="Monitor 1">
+        <h3>Hp Series 5 5S24GHQ 24" IPS panel</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 57,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="301">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="302" data-price="60000" data-name="AOC 27G2N 180Hz 1080P Gaming Monitor" data-image="Images/Monitor pic-1.webp">
+        <img src="Images/Monitor pic-1.webp" alt="Monitor 2">
+        <h3>AOC 27G2N 27" 180Hz 1080P Gaming Monitor</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 60,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="302">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="303" data-price="47999" data-name="AOC 24G2SP 1080P Gaming Monitor" data-image="Images/Monitor pic-3.png">
+        <img src="Images/Monitor pic-3.png" alt="Monitor 3">
+        <h3>AOC 24G2SP 1080P Gaming Monitor with IPS panel</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 47,999 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="303">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="304" data-price="34900" data-name="Phillips M2722H Monitor" data-image="Images/Monitor pic-4.png">
+        <img src="Images/Monitor pic-4.png" alt="Monitor 4">
+        <h3>Phillips M2722H 27inch IPS FHD Monitor</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 34,990 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="304">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="305" data-price="36000" data-name="ASUS ASJ2025Q Monitor" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 5">
+        <h3>ASUS ASJ2025Q 24" LED IPS Monitor</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 36,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="305">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="306" data-price="30999" data-name="Samsung S24QHJ7 Monitor" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 6">
+        <h3>Samsung S24QHJ7 24" IPS LED</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 30,999 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="306">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="307" data-price="33000" data-name="Dell P22DBJHQ Monitor" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 7">
+        <h3>Dell P22DBJHQ 22" IPS LED</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 33,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="307">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="308" data-price="32000" data-name="Hp S32DBHLP Monitor" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 8">
+        <h3>Hp S32DBHLP 32" IPS LED</h3>
+        <ul class="p4des"><li>High Screen Resolution</li><li>IPS Panel</li><li>HDMI, VGA Ports supported</li><li>Bright Colors</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 32,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="308">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+    </section>
+    <section class="products product-menu" id="computers" style="display: none;">
+    <!-- For Computers catalogue -->
+      <div class="product-card" data-id="401" data-price="16000" data-name="Dell Optiplex 7010" data-image="Images/Computer pc pic-2.jpg">
+        <img src="Images/Computer pc pic-2.jpg" alt="Dell Optiplex 7010">
+        <h3>Dell Optiplex 7010 i5-3rd gen with 8/128gb memory</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Tower PC</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 16,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="401">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="402" data-price="17500" data-name="Dell Optiplex 9020" data-image="Images/Computerpc-3.png">
+        <img src="Images/Computerpc-3.png" alt="Dell Optiplex 9020">
+        <h3>Dell Optiplex 9020 i5-7th gen with 16/256gb memory</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Virtualization supported</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 17,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="402">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="403" data-price="66500" data-name="Lenovo Workstation i5-8th gen" data-image="Images/Computer pc pic-4.jpg">
+        <img src="Images/Computer pc pic-4.jpg" alt="Lenovo Workstation i5-8th gen">
+        <h3>Lenovo Workstation with i5-8th gen 16/256gb memory</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Virtualization supported</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 65,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="403">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="404" data-price="60000" data-name="Hp Pro Tower G29" data-image="Images/Computer pc pic-1.webp">
+        <img src="Images/Computer pc pic-1.webp" alt="Hp Pro Tower G29">
+        <h3>HP G29 Desktop i5-10th gen | 8/512gb memory</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Best For Gaming</li><li>Compatible With Graphics Softwares</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 60,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="404">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="405" data-price="6000" data-name="Dell Optiplex 5040" data-image="Images/Dell Optiplex 5040.png">
+        <img src="Images/Dell Optiplex 5040.png" alt="Dell Optiplex 5040">
+        <h3>Dell Optiplex 5040 i5-3rd gen | 8/128gb Desktop PC</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Best For Multi-tasking</li><li>SSD Installed</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 6,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="405">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="406" data-price="9500" data-name="Lenovo Thinkcenter M73" data-image="Images/Lenovo Thinkcentre M73.jpg">
+        <img src="Images/Lenovo Thinkcentre M73.jpg" alt="Lenovo Thinkcenter M73">
+        <h3>Lenovo Thinkcenter M73 i5-4th gen</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Support Graphics Softwares</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 9,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="406">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="407" data-price="21000" data-name="Dell Optiplex 4010" data-image="Images/Dell Optiplex 5040.png">
+        <img src="Images/Dell Optiplex 5040.png" alt="Dell Optiplex 4010">
+        <h3>Dell Optiplex 4010 i5-4th gen</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Support Graphics Softwares</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 21,000 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="407">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button class="view-product"><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+        <div class="product-card" data-id="408" data-price="28500" data-name="Hp ADB20JQP Tower PC" data-image="Images/Lenovo Thinkcentre M73.jpg">
+        <img src="Images/Lenovo Thinkcentre M73.jpg" alt="Hp ADB20JQP Tower PC">
+        <h3>Hp ADB20JQP All-in-one PC | i5-4th gen 8/256gb SSD | Tower PC</h3>
+        <ul class="p4des"><li>Windows 10 installed</li><li>Virtualization supported</li><li>Wireless Connectivity</li></ul>
+        <div class="product-stock"></div>
+        <p class="pricetag">Rs 28,500 /-</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button class="add-to-wishlist" data-product-id="408">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+        </button>
+        <a style="text-decoration: none;" href="productpage.php" target="_blank"><button><i class="fa-solid fa-info"></i> Details</button></a>
+        <button>🛒 Add to Cart</button>
+        </div>
+      </section>
+    </section>
+
+    <!--Second Carousel 4 Reviews-->
+  <section class="Carousel2S" id="buyersmessage">
+    <div class="parentslide" id="ctaSection">
+    <h2 class="TestimonialH">Know Our Value In Corporate Sector</h2>
+    <p style="text-align: center; margin: 2% 0; text-transform: capitalize; font-family: sans-serif;">They made bulk purchases from us.</p>
+    <div class="carousel-container2 animateddiv">
+    <button class="prev2" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel2">
+      <div class="slide2"><p>"Amazing service and fast delivery. The product quality is top-notch!"</p>
+      <img src="Images/Image4T-1.png" loading="lazy" width="100" height="100" alt="Image For Testimonial-1"><h4>Naeem Siddiqui - Owner of Agha Sajji Restaurant</h4></div>
+      <div class="slide2"><p>"Customer support was really helpful. Will shop again for sure!"</p>
+      <img src="Images/Image4T-2.png" loading="lazy" width="100" height="100" alt="Image For Testimonial-2"><h4>Ayesha Khan - CEO of Contour Software Co.</h4></div>
+      <div class="slide2"><p>"Got exactly what I ordered, on time. Highly recommend this store."</p>
+      <img src="Images/Image4T-3.png" loading="lazy" width="100" height="100" alt="Image For Testimonial-3"><h4>Imran Qureshi - IT Supplies Manager @ Digital Dividends Pvt. Co.</h4></div>
+      <div class="slide2"><p>"Great service and excellent quality products available at affordable prices in karachi."</p>
+      <img src="Images/Image4T-4.png" loading="lazy" width="100" height="100" alt="Image For Testimonial-4"><h4>Fatima Hussain - IT Executive Officer @ Mangotech Solutions Pvt. Ltd.</h4></div>
+      <div class="slide2"><p>"I had a wonderful experience at 'Tech Care', they made my IT purchasing experience trustful and easy."</p>
+      <img src="Images/Image4T-5.png" loading="lazy" width="100" height="100" alt="Image For Testimonial-5"><h4>Nazish Begum - Owner of a popular Garments Boutique</h4></div>
+    </div>
+    <button class="next2" onclick="nextSlide()">&#10095;</button> 
+    </div>
+    <div class="btndown">
+    <a href="#customerreviews"><img id="ctaLink" class="cta-link" src="Images/down-arrow.png" width="50" height="50" alt="down arrow icon"></a>
+    </div>
+    </div>
+    <!--Second Carousel 5 Reviews-->
+  <div class="parentslide" id="customerreviews">
+    <h2 class="TestimonialH">Hear The Verdict Of Public</h2>
+    <p style="text-align: center; margin: 2% 0; text-transform: capitalize; font-family: sans-serif;">They became regular buyers, relying on us for repeated purchases.</p>
+    <div class="carousel-container2 animateddiv">
+    <button class="prev2" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel3">
+      <div class="slide2"><p>"Amazing service and fast delivery. The product quality is top-notch!"</p>
+      <img src="Images/Customer1.webp" loading="lazy" width="100" height="100" alt="Image For Testimonial-1"><h4>Ayesha Siddiqui - A University Student</h4></div>
+      <div class="slide2"><p>"Customer support was really helpful. Will shop again for sure!"</p>
+      <img src="Images/Customer2.webp" loading="lazy" width="100" height="100" alt="Image For Testimonial-2"><h4>Salman Qureshi - A Shop Owner</h4></div>
+      <div class="slide2"><p>"Got exactly what I ordered, on time. Highly recommend this store."</p>
+      <img src="Images/Customer3.webp" loading="lazy" width="100" height="100" alt="Image For Testimonial-3"><h4>Imran Malik - IT Supplies Manager @ A Software Company</h4></div>
+      <div class="slide2"><p>"Great service and excellent quality products available at affordable prices in karachi."</p>
+      <img src="Images/Customer4.webp" loading="lazy" width="100" height="100" alt="Image For Testimonial-4"><h4>Farukh Khan - IT Procurement Manager @ Itech Solutions</h4></div>
+      <div class="slide2"><p>"I had a wonderful experience at 'H&M Computers', they made my IT purchasing experience trustful and easy."</p>
+      <img src="Images/Customer5.webp" loading="lazy" width="100" height="100" alt="Image For Testimonial-5"><h4>Haseeb Khannani - Owner Of A Software House</h4></div>
+    </div>
+    <button class="next2" onclick="nextSlide()">&#10095;</button> 
+    </div>
+    <div class="btndown">
+    <a href="#howwework"><img id="ctaLink2" class="cta-link" src="Images/down-arrow.png" width="50" height="50" alt="down arrow icon"></a>
+    </div>
+    </div>
+  </section>
+  <!--How We Work Section-->
+  <section class="features-section" id="howwework">
+    <h3 class="title4cards">From Order to Delivery in 4 Steps</h3>
+      <div class="parent4fcards">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="Images/placeorder.avif" width="100" height="100" loading="lazy" alt="Man shouting in megaphone">
+            </div>
+            <h3 class="feature-title">Step 1: Place Your Order</h3>
+            <p class="feature-description">
+                Choose your product and complete a secure checkout.
+            </p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="Images/orderconfirmation.avif" width="100" height="100" loading="lazy" alt="Man holding a piggy bank">
+            </div>
+            <h3 class="feature-title">Step 2: Order Confirmation</h3>
+            <p class="feature-description">
+                We verify your order and send you instant confirmation.
+            </p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="Images/orderpacking.avif" width="100" height="100" loading="lazy" alt="Man working on a laptop">
+            </div>
+            <h3 class="feature-title">Step 3: Careful Packaging</h3>
+            <p class="feature-description">
+                Your items are packed safely and prepared for shipping.
+            </p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="Images/fastdelivery.avif" width="100" height="100" loading="lazy" alt="Man working on a laptop">
+            </div>
+            <h3 class="feature-title">Step 4: Fast Delivery</h3>
+            <p class="feature-description">
+                Your order is dispatched and delivered to your doorstep.
+            </p>
+        </div>
+      </div>  
+    </section>
+
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span><img src="Images/bagB.png" width="24" height="24" alt="shopping bag icon"> CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p id="emptyCartMessage" class="empty-cart-msg">🛒 Your cart is empty!</p>
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">0</span></p>
+    <div class="cart-buttons">
+      <button id="checker" class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!--Alert box starts here-->
+<div class="alert-box"></div>
+<!--Alert box ends here-->
+<!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" title="click here to chat on whatsapp" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsapp-icon.webp" loading="lazy" alt="WhatsApp Chat">
+</a>
+<!--Scroll to Top Button-->
+<button class="btn4scroll" id="scroll2top" onclick="scrollToTop()" title="click here to go to the top of the page."><i class="fa-solid fa-angle-up"></i> Top</button>
+
+    <!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - We Care Your Tech</h2>
+      <p>Quality products, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.webp" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.webp" width="auto" height="auto" loading="lazy"><p>+92 332 3715253</p>
+      
+      <img src="Images/LocationF.webp" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us On:</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("ctaSection");
+  const link = document.getElementById("ctaLink");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          link.classList.add("show");
+        } else {
+          link.classList.remove("show");
+        }
+      });
+    },
+    {
+      root: null,          // viewport
+      threshold: 0.3       // 30% of div must be visible
+    }
+  );
+
+  observer.observe(section);
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("customerreviews");
+  const link = document.getElementById("ctaLink2");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          link.classList.add("show");
+        } else {
+          link.classList.remove("show");
+        }
+      });
+    },
+    {
+      root: null,          // viewport
+      threshold: 0.3       // 30% of div must be visible
+    }
+  );
+
+  observer.observe(section);
+});
+document.querySelectorAll(".view-product").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault(); // stop anchor default
+    const id = btn.closest(".product-card").dataset.id;
+    window.open(`productpage.php?id=${id}`, "_blank");
+  });
+});
+fetch("get_products.php")
+    .then(res => res.json())
+    .then(products => {
+
+        products.forEach(p => {
+            
+            // find the correct product card using product ID
+            let card = document.querySelector(`.product-card[data-id="${p.id}"]`);
+            if(!card) return;
+
+            let stockContainer = card.querySelector(".product-stock");
+
+            let statusClass = "";
+            if (p.stock_status === "in") statusClass = "stock-in";
+            if (p.stock_status === "low") statusClass = "stock-low";
+            if (p.stock_status === "out") statusClass = "stock-out";
+
+            stockContainer.innerHTML = `
+                <span class="stock-status ${statusClass}">
+                    ${p.stock_text}
+                </span>
+            `;
+        });
+    });
+document.querySelectorAll('.add-to-wishlist').forEach(button => {
+    button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        
+        fetch('wishlist_add.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({product_id: productId})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.success){
+                button.innerHTML = '<i class="fa-solid fa-heart"></i> Added to Wishlist';
+            }
+        });
+    });
+});
+    (() => {
+  const currentUrl = new URL(window.location.href);
+
+  if (currentUrl.pathname.includes('.html')) {
+    currentUrl.pathname = currentUrl.pathname.split('.html')[0] + '.html';
+    currentUrl.search = '';
+    currentUrl.hash = '';
+
+    if (currentUrl.href !== window.location.href) {
+      window.location.replace(currentUrl.href);
+    }
+  }
+})();
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loading');
+  // Hide loader after content is loaded
+  setTimeout(() => {
+    document.body.classList.remove('loading');
+    const loader = document.querySelector(".logo-loader");
+    loader.style.display = "none";
+    const content = document.querySelector(".content");
+    content.style.visibility = "visible";
+  }, 2000); // Adjust the timeout duration as needed
+});
+// ---------------------------------
+// RESET CART IF COMING FROM CHECKOUT
+// ---------------------------------
+if (sessionStorage.getItem("justCheckedOut") === "yes") {
+    localStorage.removeItem("cart");
+
+    // clear server-side cart
+    fetch("clear_cart.php").catch(()=>{});
+
+    sessionStorage.removeItem("justCheckedOut");
+}
+// Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+const elements = document.querySelectorAll('.animateddiv');
+const expandEl = document.querySelector('.carousel-container2');
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.add('expand-show');
+    } else {
+      entry.target.classList.remove('show');
+      entry.target.classList.remove('expand-show');
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+elements.forEach(el => observer.observe(el));
+observer.observe(expandEl);
+
+const categoryTabs = document.querySelectorAll(".category-tab");
+const productMenus = document.querySelectorAll(".product-menu");
+const sortSelect = document.getElementById('sortPrice');
+const productSection = document.querySelector('.products4P'); // parent container
+let activeCategory = 'laptops'; // Default active category
+
+// Function to show a specific product menu
+function showMenu(categoryId) {
+  productMenus.forEach(menu => {
+    menu.style.display = "none";
+  });
+
+  const targetMenu = document.getElementById(categoryId);
+  if (targetMenu) {
+    targetMenu.style.display = "grid";
+    activeCategory = categoryId; // Update the active category
+  }
+}
+
+// Initial setup
+showMenu(activeCategory);
+
+// Handle category tab clicks
+categoryTabs.forEach(tab => {
+  tab.addEventListener("click", function () {
+    // Remove 'active' class from all tabs
+    categoryTabs.forEach(t => t.classList.remove("active"));
+    // Add 'active' to clicked tab
+    this.classList.add("active");
+
+    // Get target category from data attribute
+    const categoryId = this.getAttribute("data-category");
+
+    // Show corresponding product menu
+    showMenu(categoryId);
+  });
+});
+
+// ----- SEARCH FUNCTIONALITY -----
+const searchInput = document.getElementById('productSearch');
+const clearBtn = document.getElementById('cleartext');
+const noResultMessage = document.querySelector(".no-result-message");
+
+// Hide clear button initially
+clearBtn.style.display = "none";
+
+// Handle typing in search box
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  const activeMenu = document.getElementById(activeCategory);
+
+  if (!activeMenu) return;
+
+  const products = activeMenu.querySelectorAll('.product-card');
+  let hasMatch = false;
+
+  // Toggle clear button visibility
+  clearBtn.style.display = searchTerm.length > 0 ? "inline-block" : "none";
+
+  // Remove old message
+  const existingMsg = activeMenu.querySelector('.no-result-message');
+  if (existingMsg) existingMsg.remove();
+
+  products.forEach(product => {
+    const productName = product.dataset.name.toLowerCase();
+
+    if (productName.includes(searchTerm) && searchTerm !== '') {
+      product.style.display = 'grid';
+      hasMatch = true;
+    } else if (searchTerm === '') {
+      product.style.display = 'grid'; // reset view
+    } else {
+      product.style.display = 'none';
+    }
+  });
+
+  if (searchTerm === '') {
+    noResultMessage.style.display = 'none';
+  } else if (!hasMatch) {
+    noResultMessage.style.display = 'grid';
+  } else {
+    noResultMessage.style.display = 'none';
+  }
+});
+
+// Handle clear button click
+clearBtn.addEventListener('click', () => {
+  const activeMenu = document.getElementById(activeCategory);
+  const products = activeMenu.querySelectorAll('.product-card');
+
+  // Clear text
+  searchInput.value = "";
+  searchInput.focus();
+
+  // Hide clear button
+  clearBtn.style.display = "none";
+
+  // Restore all products
+  products.forEach(p => p.style.display = 'grid');
+
+  // Hide no-result message
+  noResultMessage.style.display = 'none';
+});
+
+  // Sort on price change
+  sortSelect.addEventListener('change', () => {
+    const productList = document.getElementById(activeCategory); // now dynamic
+    const products = Array.from(productList.querySelectorAll('.product-card'));
+
+    products.sort((a, b) => {
+      const priceA = parseInt(a.dataset.price);
+      const priceB = parseInt(b.dataset.price);
+      return sortSelect.value === 'lowToHigh' ? priceA - priceB : priceB - priceA;
+    });
+
+    productList.innerHTML = '';
+    products.forEach(product => productList.appendChild(product));
+  });
+  // For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.body; // ✅ Use body directly
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    body.classList.remove('dark-mode'); // make sure light mode resets
+    toggle.checked = false;
+    icon.textContent = '🌞';
+  }
+});
+const cartSidebar = document.getElementById("cartSidebar");
+const sidebar = document.querySelector(".sidebar");
+const shopping = document.querySelector('.hideontab');
+const accountimg = document.getElementById('img4user');
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+let currentIndex = 0;
+
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const dots = document.querySelectorAll('.dot');
+
+/* Update carousel position + dots */
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+
+  document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+  document.querySelector('.carousel2').style.transform = `translateX(${offset}%)`;
+  document.querySelector('.carousel3').style.transform = `translateX(${offset}%)`;
+
+  // Update active dot
+  document.querySelector('.dot.active')?.classList.remove('active');
+  dots[currentIndex].classList.add('active');
+}
+/* Next slide */
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateCarousel();
+}
+/* Previous slide */
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+}
+/* Dot click functionality */
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});
+
+/* Autoplay */
+function startAutoplay() {
+  setInterval(() => {
+    nextSlide();
+  }, 3000);
+}
+
+/* Start autoplay */
+startAutoplay();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartIcon = document.getElementById("add2CartBtn");
+  const addToCartBtn1 = document.getElementById("add2CartBtn1");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const checkitout = document.getElementById('checker');
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const cartCount = document.getElementById('p4qty');
+  const alertBox = document.querySelector(".alert-box");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // 🔄 Always sync counter on page load
+  updateCartCount();
+  renderCart();
+
+  function sortCartById() {
+    cart.sort((a, b) => a.id - b.id);
+  }
+
+  // ADD TO CART
+  function addToCart(product) {
+    const existing = cart.find(
+      it => it.title === product.title && it.color === product.color
+    );
+
+    if (existing) {
+      existing.quantity += product.quantity;
+    } else {
+      cart.push(product);
+    }
+    sortCartById();
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+  }
+
+  function updateCartCount() {
+  const cartStored = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQty = cartStored.reduce((sum, item) => sum + item.quantity, 0);
+  cartCount.innerText = totalQty;
+}
+
+  function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    return fetch("save_cart.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cart)
+    })
+    .catch(err => console.error("Save cart error:", err));
+  }
+function loadCart() {
+  fetch("load_cart.php")
+    .then(res => res.json())
+    .then(data => {
+      if (Array.isArray(data)) {
+        cart = data;
+        sortCartById();
+        renderCart();
+      }
+    })
+    .catch(err => console.error("Load cart error:", err));
+}
+checkitout.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const cartvalue = Number(
+    cartTotal.textContent.replace(/[^0-9]/g, '')
+  );
+
+  saveCart().then(() => {
+
+    if (cartvalue >= 25000 && cartvalue <= 200000) {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "✅ Your cart has been saved successfully and you are now redirecting to the checkout page...";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+          window.location.href = "checkout.php";
+        }, 2000);
+      } else {
+        window.location.href = "checkout.php";
+      }
+    } else {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "⚠️ Minimum cart value should be Rs. 25,000 and Maximum Rs. 200,000 to proceed to checkout.";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+        }, 3000);
+      }
+    }
+  });
+});  
+  function renderCart() {
+    sortCartById(); // ✅ ENSURE ORDER BEFORE UI
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = `<p class="empty-cart-msg">🛒 Your cart is empty!</p>`;
+      cartTotal.textContent = "Rs. 0";
+
+      checkitout.classList.add("disabler");
+      checkitout.disabled = true;
+
+      updateCartCount();
+      return;
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <div class="cart-item-details">
+          <p><strong>${item.id}</strong></p>
+          <p class="item-title"><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button class="qty-minus ${item.quantity === 1 ? 'is-min' : ''}" onclick="changeQty(${i}, -1)" aria-disabled="${item.quantity === 1}">−</button>
+            <span class="item-qty">${item.quantity}</span>
+            <button class="qty-plus ${item.quantity === 10 ? 'is-max' : ''}" onclick="changeQty(${i}, 1)" aria-disabled="${item.quantity === 10}">+</button>
+          </div>
+          <div class="row4pr">
+          <p class="item-price">Rs ${(item.price * item.quantity).toLocaleString('en-IN')} only</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+          </div>
+      `;
+      cartItems.appendChild(div);
+    });
+
+    const indianFormat = total.toLocaleString('en-IN');
+
+    cartTotal.textContent = "Rs. " + indianFormat + " only";
+
+    checkitout.disabled = false;
+    checkitout.classList.remove("disabler");
+
+    updateCartCount();
+  }
+// ✅ Change quantity with validation
+    window.changeQty = function (index, delta) {
+  const item = cart[index];
+  let newQty = item.quantity + delta;
+
+  if (newQty > 4) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Max 4 quantities allowed.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+  if (newQty < 1) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Add at least one quantity.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+
+  item.quantity = newQty;
+  saveCart();
+  renderCart();
+  updateCartCount();
+};
+
+  window.removeItem = function (index) {
+    cart.splice(index, 1);
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+};
+  // ✅ Handle product buttons dynamically
+  document.querySelectorAll(".product-card button:nth-of-type(2)").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const product = {
+        id: Number(card.dataset.id ?? 0),        // ✅ product ID
+        title: card.dataset.name || "Unnamed",
+        price: parseFloat(card.dataset.price) || 0,
+        image: card.dataset.image || "https://via.placeholder.com/80",
+        color: card.dataset.color || "Default",
+        quantity: 1
+      };
+      if (!product.title || isNaN(product.price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart(product);
+      cartSidebar.classList.add("open");
+    });
+  });
+  // ✅ Open sidebar from static buttons
+  if (addToCartBtn1) {
+    addToCartBtn1.addEventListener("click", () => {
+      cartSidebar.classList.toggle("open");
+    });
+  }
+  const shoppingq = document.getElementById("p4qty");
+  if (addToCartBtn2) {
+    let closeTimer2;
+    addToCartBtn2.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+      accountimg.style.display = 'none';
+
+      if (window.innerWidth < 1281 && cartSidebar.classList.contains("open")) {
+        startCloseTimer2();
+      }
+      else {
+        // If user closes manually, stop timer
+          clearTimeout(closeTimer2);
+      }
+      function startCloseTimer2() {
+      // Clear old timer before starting a new one
+      clearTimeout(closeTimer2);
+
+      closeTimer2 = setTimeout(() => {
+        cartSidebar.classList.remove("open");
+      }, 10000); // 10000 ms = 10 seconds
+      }
+    });
+  }
+  if (accountimg) {
+    accountimg.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+    });
+  }
+  // ✅ Close sidebar
+  if (closeCart) {
+    closeCart.addEventListener("click", () => {
+      cartSidebar.classList.remove("open");
+    });
+  }
+  loadCart();
+});
+// ✅ Close cart if user clicks outside the sidebar 
+document.addEventListener("click", (event) => {
+
+  if (cartSidebar.classList.contains("open")) {
+    if (
+      !cartSidebar.contains(event.target) &&
+      !event.target.closest("#add2CartBtn2") &&
+      !event.target.closest(".product-card button") &&
+      !event.target.closest(".remove-item") &&
+      !event.target.closest(".qty-controls") // ✅ fixed line
+    ) {
+      cartSidebar.classList.remove("open");
+    }
+  }
+});
+</script>
+</body>
+</html>

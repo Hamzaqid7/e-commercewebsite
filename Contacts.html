@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H & M Computers</title>
+  <meta name="description" content="Buy reliable computers and laptops on 'H & M Computers'. An E-commerce website solely and proudly created by 'Hamza Aijaz Qidwai'.">
+  <link rel="canonical" href="https://techcare.com/">
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <!-- Load font stylesheet directly (non-blocking with display=swap) -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+.logo-loader {
+  position: fixed;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  z-index: 111111;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #0f143d;
+}
+.logo-loader h1 {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+.text {
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: transparent;
+
+  /* FILLABLE WAVE */
+ background:
+  radial-gradient(0.9em at 50% 1.2em, #6ec1ff 98%, transparent 102%)
+    0 0 / 2.2em 200% repeat-x,
+  radial-gradient(0.9em at 50% -0.6em, #ff9c3d 98%, transparent 102%)
+    0 1.6em / 2.2em 200% repeat-x;
+animation: waveFill 2s infinite linear;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.text span {
+  margin-left: 4px;
+}
+@keyframes waveFill {
+  from {
+    background-position:
+      100% 100%,   /* bottom-left */
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0%,    /* top-center */
+      50% 0%;
+  }
+  to {
+    background-position:
+      0% 100%, /* bottom-right */
+      0% 100%;
+  }
+}
+.content {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    visibility: hidden;
+}
+  .hideondesk {
+      display: none;
+  }
+  .disabler {
+  background-color: gray;
+  color: #fff;
+  }
+  #loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 11111111;
+    }
+  #loader:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11111111;
+    background-repeat: no-repeat;
+    background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100% ), 
+        radial-gradient( circle 4rem at 4rem 4rem, #ffffff 100%, transparent 0 ), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 170px, transparent 0), 
+        linear-gradient(#aaaaaa 320px, transparent 0), 
+      linear-gradient(#ffffff 100%, transparent 0);
+    background-size: 264px 100%, 8rem 8rem, 128px 16px, 123px 16px, 160px 16px, 200px 16px, 200px 16px, 280px 16px, 360px 16px, 100% 170px, 80% 30%, 100% 100%;
+    background-position: 0 0 , 5px 23px, 128px 40px, 26px 72px, 16px 96px, 16px 120px, 16px 280px, 16px 320px, 16px 360px, 0px 0px, 60% 80%, 0 0;
+    animation: skeleton-animation 2000ms infinite;
+  }
+  
+  @keyframes skeleton-animation {
+    to {
+      background-position: 100% 0, 20px 23px, 128px 40px, 26px 72px, 16px 96px, 16px 120px, 16px 260px, 16px 300px, 16px 340px, 0px 0px, 60% 60%, 0 0;
+    }
+  }
+  #content {
+    display: none;
+    z-index: 1111;
+  }
+  .CenterText {
+    display: none;
+  }
+#hoverText {
+  color: #fff;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(135deg, #000000d1, #0089ffa6);
+  }
+.CCh2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#alert {
+      display: none;
+      background-color: #60e665;
+      padding: 10px 25px;
+      border-radius: 15px;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999999;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-align: center;
+      border: 1px solid #000;
+      box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    /* For Desktop Screen Size */
+@media (min-width: 1281px) {
+.main-cf {
+  margin-top: 8%;
+  margin-bottom: 2%;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.main-cf h2 {
+  font-size: 96px;
+  line-height: 126px;
+  text-decoration: underline;
+}
+.main-cf h3 {
+  font-size: 28px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #1e90ff;
+  word-wrap: break-word;
+  width: 80%;
+  letter-spacing: 1px;
+}
+.Main-infoC {
+  position: relative;
+  top: 5.4rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.Main-infoC button {
+  margin: 4rem;
+  padding: 10px 18px;
+  border: 2px solid #fff;
+  background: #1e90ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.Main-infoC button:hover {
+  background: #fff;
+  color: #000;
+  outline: 2px solid #d87f0b;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: #00ffff;
+  text-align: center;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+/* Force the third (email) item to center below the first two */
+.info-item:nth-child(3) {
+  grid-column: 1 / 3; /* spans across both columns */
+  justify-content: center;
+}
+.Main-infoC h3 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.Main-infoCP {
+  position: relative;
+  width: 100%;
+  height: 322px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: -1;
+}
+.Main-infoC h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 44px;
+  letter-spacing: -0.5px;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #00c3ff;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  width: 70%;
+}
+.Main-infoCP p {
+  font-size: 1.3rem;
+  letter-spacing: 0px;
+  width: auto;
+}
+.Main-infoCP img {
+  width: 48px;
+  height: auto;
+  transition: opacity 0.4s ease;
+}
+.containerC25 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+  width: 100%;
+}
+h1.CC {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+  }
+.CCh2 {
+  font-size: 2.5rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  width: 80%;
+}
+  .contact-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    }
+  .contact-form, .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 44%;
+      background: #41c4ff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      height: 670px;
+    }
+  #contactForm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: left;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-form label {
+      font-size: 1.4rem;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 20px 10px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 16px;
+      resize: vertical;
+      width: 80%;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 80%;
+      border: 2px solid #fff;
+      background: #1e90ff;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #fff;
+      color: #000;
+      outline: 2px solid #d87f0b;
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+    .contact-wrapper h3 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      margin-left: 8%;
+      color: #00195b;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+  }
+  /* For Smallest Screen Size */
+@media (min-width: 220px) and (max-width: 374px) {
+.CCh2 {
+  font-size: 24px;
+  line-height: normal;
+  text-align: left;
+  word-wrap: break-word;
+  width: 80%;
+}
+.main-cf {
+  margin-top: 130px;
+  text-align: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-cf h2 {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 5%;
+}
+.main-cf h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+.Main-infoC {
+  position: relative;
+  top: 5.4rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.Main-infoC button {
+  margin: 2rem;
+  padding: 10px 18px;
+  border: 2px solid #fff;
+  background: #1e90ff;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.Main-infoC button:hover {
+  background: #fff;
+  color: #000;
+  outline: 2px solid #d87f0b;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #00ffff;
+  text-align: center;
+  width: 90%;
+}
+.Main-infoCP {
+  position: relative;
+  width: 100%;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 24px;
+}
+.Main-infoC h1 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #00c3ff;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  width: 70%;
+}
+.Main-infoCP p {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  width: 80%;
+}
+.Main-infoCP img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.4s ease;
+}
+.ContactBgstyle {
+  width: auto;
+  margin-top: 5.4rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ContactBgstyle img {
+  width: 100%;
+  height: 626px;
+}
+.containerC25 {
+  margin-top: 12%;
+  width: 100%;
+}
+h1.CC {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 48px;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+    }
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-form, .contact-info {
+      width: 100%;
+      background: #41c4ff;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .contact-form label {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      background-color: #ffffffb0;
+      width: 80%;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: 2px solid royalblue;
+      background: #00203f;
+      color: white;
+      font-size: 14px;
+      border-radius: 8px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-wrapper h3 {
+      margin-left: 5%;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #00195b;
+      text-decoration: underline;
+    }
+    .contact-info p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      font-family: system-ui;
+      margin-bottom: 6px;
+      margin-left: 5%;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+  }
+  /* For Larger Screens */
+@media (min-width: 375px) and (max-width: 767px) {
+.main-cf {
+  margin-top: 120px;
+  text-align: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-cf h2 {
+  font-size: 48px;
+  line-height: 72px;
+  text-decoration: underline;
+}
+.main-cf h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  font-style: italic;
+  color: #1e90ff;
+  word-wrap: break-word;
+  width: 80%;
+  letter-spacing: -1px;
+}
+.Main-infoC {
+  position: relative;
+  top: 5.4rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.Main-infoC button {
+  margin: 2rem;
+  padding: 10px 18px;
+  border: 2px solid royalblue;
+  background: #00303f;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.Main-infoC button:hover {
+  background: #fff;
+  color: #000;
+  outline: 2px solid #d87f0b;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #00ffff;
+  text-align: center;
+  width: 85%;
+}
+/* Force the third (email) item to center below the first two */
+.info-item:nth-child(3) {
+  grid-column: 1 / 3; /* spans across both columns */
+  justify-content: center;
+}
+.Main-infoC h3 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.Main-infoCP {
+  position: relative;
+  width: 100%;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 30px;
+}
+.Main-infoC h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #00c3ff;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  width: 70%;
+}
+.Main-infoCP p {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  width: 80%;
+}
+.Main-infoCP img {
+  width: 36px;
+  height: 36px;
+  transition: opacity 0.4s ease;
+}
+.containerC25 {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+h1.CC {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+    }
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-form, .contact-info {
+      width: 100%;
+      background: #41c4ff;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form label {
+    font-size: 1.4rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  .contact-form input, 
+  .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      background-color: #ffffffb0;
+      width: 80%;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 10px 18px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 30px;
+      border: 1px solid #ef7637;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-wrapper h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      margin-left: 5%;
+      text-decoration: underline;
+      color: #00195b;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+      margin-left: 5%;
+      font-size: 18px;
+      letter-spacing: 0px;
+      line-height: 27px;
+      font-family: system-ui;
+      font-weight: 500;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10% 0 5% 0;
+    }  
+  }
+  /* For Tablet Viewport */
+@media (min-width: 768px) and (max-width: 1280px) {
+.CCh2 {
+  font-size: 2.35rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  font-weight: 600;
+  width: 80%;
+}
+.main-cf {
+  margin-top: 110px;
+  text-align: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-cf h2 {
+  font-size: 62px;
+  line-height: 93px;
+  text-decoration: underline;
+}
+.main-cf h3 {
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: 500;
+  font-style: italic;
+  color: #1e90ff;
+  word-wrap: break-word;
+  width: 80%;
+}
+.Main-infoC {
+  position: relative;
+  top: 5.4rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.Main-infoC button {
+  margin: 2rem;
+  padding: 10px 18px;
+  border: 2px solid #fff;
+  background: #1e90ff;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.Main-infoC button:hover {
+  background: #fff;
+  color: #000;
+  outline: 2px solid #d87f0b;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #00ffff;
+  text-align: center;
+  width: 70%;
+}
+/* Force the third (email) item to center below the first two */
+.info-item:nth-child(3) {
+  grid-column: 1 / 3; /* spans across both columns */
+  justify-content: center;
+}
+.Main-infoC h3 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.Main-infoCP {
+  position: relative;
+  width: 100%;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 45px;
+}
+.Main-infoC h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #00c3ff;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  width: 70%;
+}
+.Main-infoCP p {
+  font-size: 1.3rem;
+  letter-spacing: 0px;
+  width: 80%;
+}
+.Main-infoCP img {
+  width: 48px;
+  height: auto;
+  transition: opacity 0.4s ease;
+}
+.containerC25 {
+  margin-top: 2rem;
+  width: auto;
+  padding: 30px 20px;
+}
+h1.CC {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+}
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+  .contact-form, .contact-info {
+    width: 100%;
+    background: #41c4ff;
+    height: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form label {
+    font-size: 1.4rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      width: 80%;
+      background-color: #ffffffb0;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-wrapper h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      margin-left: 3%;
+      color: #00195b;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+      margin-left: 3%;
+    }
+    .map {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
+  }
+  </style>
+</head>
+<body>
+<!-- Loader Element -->
+<div class="logo-loader">
+  <span class="text">T<span>C</span></span>
+  <h1>Tech Care By Hamza N Muzammil</h1>
+</div>
+<!-- End of Loader Element -->
+<!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+<div class="content">
+  <header class="navbar">
+    <img src="Images/favicon.ico" class="logo" loading="lazy">
+    <h1 class="Hero-heading"><a style="color: #fff;" href="index.html">Tech Care</a></h1>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <!-- User Account Icon -->
+      <div class="parallelicons">
+        <div class="user-account" id="user-panel">
+          <img id="img4user" src="Images/User-icon2.png" title="For accessing user-panel" alt="user-account icon" loading="lazy">
+        </div>
+        <!--Add to cart button-->
+        <div class="cartbtn">
+          <img src="Images/bagB.png" id="add2CartBtn2" width="32" height="32" alt="cart icon" class="hideontab" title="Cart containing your added products">
+          <p id="p4qty">0</p>
+        </div>
+      <!-- Theme Mode Toggle Btn -->
+        <label class="theme-switch" title="Change body theme">
+        <input type="checkbox" id="toggleTheme">
+        <span class="slider">
+          <span class="icon" id="modeIcon">🌞</span>
+        </span>
+        </label>
+      </div>
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="search-container2">
+    <button class="search-icon" id="searchToggle">
+      <img src="Images/search.webp" width="25px" height="25px" loading="eager" title="search your products..." alt="search icon">
+    </button>
+
+    <div class="search-box" id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <span class="clear-btn" id="clearBtn">×</span>
+    </div>
+  </div>
+  <!-- User Account Icon -->
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>Hamza Aijaz</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span> Apki Details</li>
+      <li><span class="icon">❤️</span> Favourites</li>
+      <li><span class="icon">📍</span> Addresses</li>
+      <li><span class="icon">🔔</span> Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+<div class="Main-infoC" id="hoverText">
+  <h1>We’re Here to Help You</h1>
+  <p>Have questions about your order, shipping, returns, or product details? Our support team is ready to assist.</p>
+  <a href="#contactform"><button title="click here to make a contact">Contact Support</button></a>
+
+  <div class="Main-infoCP" id="hoverText">
+    <div class="info-item">
+      <img src="Images/Whatsapp-icon.webp" loading="lazy" alt="Whatsapp icon">
+      <p>Whatsapp Us at : 0332 3715253</p>
+    </div>
+
+    <div class="info-item">
+      <img src="Images/telephoneF.webp" loading="lazy" alt="Telephone icon">
+      <p>Telephone Us at : 021-22371456</p>
+    </div>
+
+    <div class="info-item">
+      <img src="Images/gmailF.webp" loading="lazy" alt="gmail icon">
+      <p>Email Us at : hamzaaijaz41@gmail.com</p>
+    </div>
+  </div>
+</div>
+<div class="main-cf" id="contactform">
+<h2 class="CC dm-serif-text-regular-italic">Contact Us</h2>
+<h3 style="text-transform: uppercase; text-align: center;" class="CCh2">Tell us about your idea here!</h3>
+</div>
+<div class="containerC25">
+    <div class="contact-wrapper">
+
+      <!-- Contact Form -->
+    <div class="contact-form">
+      <h3 class="TemplateH">Let's Connect</h3>  
+        <form id="contactForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="username" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subjects" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="messages" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+    </div>
+      <div id="alert"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader after content is loaded
+  setTimeout(() => {
+    const loader = document.querySelector(".logo-loader");
+    loader.style.display = "none";
+    const content = document.querySelector(".content");
+    content.style.visibility = "visible";
+  }, 2000); // Adjust the timeout duration as needed
+});
+const form = document.getElementById("contactForm");
+const alertBox = document.getElementById("alert");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // prevent default form submission
+
+      const formData = new FormData(form);
+      const email = formData.get("email");
+
+      // Send request to PHP without reloading page
+      const response = await fetch("contact.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const text = await response.text();
+
+      // Show alert with response
+      alertBox.textContent = text;
+      alertBox.style.display = "flex";
+
+      // Auto-hide alert after 3 seconds
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 3000);
+
+      // Clear form input
+      form.reset();
+    });
+</script>
+
+      <!-- Contact Info + Map -->
+      <div class="contact-info">
+        <h3 class="TemplateH">Our Store Address</h3>
+        <p><strong>Email:</strong> support@thelaptopclub.com</p>
+        <p><strong>Phone:</strong> +92 332 3715253</p>
+        <p><strong>Address:</strong> Shop #10, Tech Market, Karachi, Pakistan</p>
+
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.504029649986!2d67.03023961500007!3d24.86142298405692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e9ba60b1e6f%3A0x1e5e9d8ff572cd84!2sTech%20Market!5e0!3m2!1sen!2s!4v1615459653734!5m2!1sen!2s" 
+            width="100%" 
+            height="100%" 
+            style="border:0; border-radius: 30px;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsapp-icon.webp" loading="lazy" alt="WhatsApp Chat">
+</a>
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span><img src="Images/bagB.png" width="24" height="24" alt="shopping bag icon"> CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p id="emptyCartMessage" class="empty-cart-msg">🛒 Your cart is empty!</p>
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">Rs.0</span></p>
+    <div class="cart-buttons">
+      <button id="checker" class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!-- Alert message box starts -->
+<div class="alert-box"></div>
+<!-- Alert message box ends -->
+ <!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" title="click here to contact us on whatsapp" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsapp-icon.webp" loading="lazy" alt="WhatsApp Chat">
+</a>
+
+    <!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - We Care Your Tech</h2>
+      <p>Quality products, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.webp" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.webp" width="auto" height="auto" loading="lazy"><p>+92 332 3715253</p>
+      
+      <img src="Images/LocationF.webp" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+</div>
+<script>
+  (() => {
+  const currentUrl = new URL(window.location.href);
+
+  if (currentUrl.pathname.includes('.html')) {
+    currentUrl.pathname = currentUrl.pathname.split('.html')[0] + '.html';
+    currentUrl.search = '';
+    currentUrl.hash = '';
+
+    if (currentUrl.href !== window.location.href) {
+      window.location.replace(currentUrl.href);
+    }
+  }
+})();
+  document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loading');
+  // Hide loader after content is loaded
+  setTimeout(() => {
+    document.body.classList.remove('loading');
+    const loader = document.querySelector(".logo-loader");
+    loader.style.display = "none";
+    const content = document.querySelector(".content");
+    content.style.visibility = "visible";
+  }, 2000); // Adjust the timeout duration as needed
+});
+// For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.querySelector('.content');
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    icon.textContent = '🌞';
+  }
+});
+document.addEventListener("mousemove", (e) => {
+// For Custom Mouse Trailing Effect
+const trail = document.querySelector(".cursor-trail");
+  const x = e.clientX;
+  const y = e.clientY;
+  trail.style.transform = `translate(${x}px, ${y}px)`;
+});
+const cartSidebar = document.getElementById("cartSidebar");
+const sidebar = document.querySelector(".sidebar");
+const shopping = document.querySelector('.hideontab');
+const shoppingq = document.getElementById("p4qty");
+const accountimg = document.getElementById('img4user');
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+// Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartBtn1 = document.getElementById("add2CartBtn1");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const checkitout = document.getElementById('checker');
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const cartCount = document.getElementById('p4qty');
+  const alertBox = document.querySelector('.alert-box');
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // 🔄 Always sync counter on page load
+  updateCartCount();
+  renderCart();
+
+  // ADD TO CART
+  function addToCart(product) {
+    const existing = cart.find(
+      it => it.title === product.title && it.color === product.color
+    );
+
+    if (existing) {
+      existing.quantity += product.quantity;
+    } else {
+      cart.push(product);
+    }
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+  }
+
+  function updateCartCount() {
+  const cartStored = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQty = cartStored.reduce((sum, item) => sum + item.quantity, 0);
+  cartCount.innerText = totalQty;
+}
+
+  function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    return fetch("save_cart.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cart)
+    })
+    .catch(err => console.error("Save cart error:", err));
+  }
+function loadCart() {
+  fetch("load_cart.php")
+    .then(res => res.json())
+    .then(data => {
+      if (Array.isArray(data)) {
+        cart = data;
+        renderCart();
+      }
+    })
+    .catch(err => console.error("Load cart error:", err));
+}
+checkitout.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const cartvalue = Number(
+    cartTotal.textContent.replace(/[^0-9]/g, '')
+  );
+
+  saveCart().then(() => {
+
+    if (cartvalue >= 25000 && cartvalue <= 200000) {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "✅ Your cart has been saved successfully and you are now redirecting to the checkout page...";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+          window.location.href = "checkout.php";
+        }, 2000);
+      } else {
+        window.location.href = "checkout.php";
+      }
+    } else {
+      if (alertBox) {
+        alertBox.style.visibility = "visible";
+        alertBox.innerHTML =
+          "⚠️ Minimum cart value should be Rs. 25,000 and Maximum Rs. 200,000 to proceed to checkout.";
+
+        setTimeout(() => {
+          alertBox.style.visibility = "hidden";
+        }, 3000);
+      }
+    }
+  });
+});
+  // ✅ Render cart items dynamically
+  function renderCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = `<p class="empty-cart-msg">🛒 Your cart is empty!</p>`;
+      cartTotal.textContent = "Rs. 0";
+
+      checkitout.classList.add("disabler");
+      checkitout.disabled = true;
+
+      updateCartCount();
+      return;
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <div class="cart-item-details">
+          <p class="item-title"><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button class="qty-minus ${item.quantity === 1 ? 'is-min' : ''}" onclick="changeQty(${i}, -1)" aria-disabled="${item.quantity === 1}">−</button>
+            <span class="item-qty">${item.quantity}</span>
+            <button class="qty-plus ${item.quantity === 10 ? 'is-max' : ''}" onclick="changeQty(${i}, 1)" aria-disabled="${item.quantity === 10}">+</button>
+          </div>
+          <div class="row4pr">
+          <p class="item-price">Rs ${(item.price * item.quantity).toLocaleString('en-IN')} only</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+          </div>
+      `;
+      cartItems.appendChild(div);
+    });
+
+    const indianFormat = total.toLocaleString('en-IN');
+
+    cartTotal.textContent = "Rs. " + indianFormat + " only";
+
+    checkitout.disabled = false;
+    checkitout.classList.remove("disabler");
+
+    updateCartCount();
+  }
+// ✅ Change quantity with validation
+    window.changeQty = function (index, delta) {
+  const item = cart[index];
+  let newQty = item.quantity + delta;
+
+  if (newQty > 4) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Max 4 items quantities.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+
+  if (newQty < 1) {
+    alertBox.style.visibility = 'visible';
+    alertBox.innerHTML = "Add at least one quantity.";
+    setTimeout(() => alertBox.style.visibility = 'hidden', 3000);
+    return;
+  }
+
+  item.quantity = newQty;
+  saveCart();
+  renderCart();
+  updateCartCount();
+};
+
+  window.removeItem = function (index) {
+    cart.splice(index, 1);
+
+    saveCart();
+    updateCartCount();
+    renderCart();
+};
+  // ✅ Handle product buttons dynamically
+  document.querySelectorAll(".product-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const product = {
+        title: card.dataset.name || "Unnamed",
+        price: parseFloat(card.dataset.price) || 0,
+        image: card.dataset.image || "https://via.placeholder.com/80",
+        color: card.dataset.color || "Default",
+        quantity: 1
+      };
+      if (!product.title || isNaN(product.price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart(product);
+      cartSidebar.classList.add("open");
+    });
+  });
+  // ✅ Open sidebar from static buttons
+  if (addToCartBtn1) {
+    addToCartBtn1.addEventListener("click", () => {
+      cartSidebar.classList.toggle("open");
+    });
+  }
+  const shoppingq = document.getElementById("p4qty");
+  if (addToCartBtn2) {
+    addToCartBtn2.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+    });
+  }
+  if (accountimg) {
+    accountimg.addEventListener("click", () => {
+    const hamburger = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const sidebar = document.querySelector(".sidebar");
+
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.toggle("open");
+      shopping.classList.remove('active');
+      shoppingq.classList.remove('active');
+    });
+  }
+  // ✅ Close sidebar
+  if (closeCart) {
+    closeCart.addEventListener("click", () => {
+      cartSidebar.classList.remove("open");
+    });
+  }
+  loadCart();
+});
+// ✅ Close cart if user clicks outside the sidebar 
+document.addEventListener("click", (event) => {
+
+  if (cartSidebar.classList.contains("open")) {
+    if (
+      !cartSidebar.contains(event.target) &&
+      !event.target.closest("#add2CartBtn2") &&
+      !event.target.closest(".product-card button") &&
+      !event.target.closest(".remove-item") &&
+      !event.target.closest(".qty-controls") // ✅ fixed line
+    ) {
+      cartSidebar.classList.remove("open");
+    }
+  }
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
