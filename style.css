@@ -554,7 +554,7 @@ header {
   display: none;
 }
 .logo-loader h1 {
-  font-size: 1.25rem;
+  font-size: 24px;
 }
 .hideontab {
   display: inline-block;
@@ -7013,6 +7013,7 @@ label {
   }
 
 }
+
 
 
 
