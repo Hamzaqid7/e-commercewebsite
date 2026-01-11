@@ -235,6 +235,9 @@ header {
 .newsletter {
   background: linear-gradient(20deg, #0078ff, #ffe000);
 }
+.dark-mode .banners h2, .dark-mode .category-tab h3 {
+  color: #fff;
+}
 .dark-mode .newsletter {
   background: linear-gradient(20deg, #0078ff, #041a38);
 }
@@ -7000,5 +7003,6 @@ label {
   }
 
 }
+
 
 
