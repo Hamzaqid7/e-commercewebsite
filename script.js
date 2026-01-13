@@ -189,3 +189,9 @@ document.addEventListener("mousemove", (e) => {
   const y = e.clientY;
   trail.style.transform = `translate(${x}px, ${y}px)`;
 });
+// To disable the context menu of the website
+document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    });
