@@ -3676,7 +3676,7 @@ input:checked + .slider .icon {
   opacity: 0;
   transition: all 0.25s ease;
   z-index: 1111111;
-  left: calc(50% - 28%);
+  left: calc(50% - 320px);
 }
 /* When active, it expands */
 .search-box.active {
@@ -7013,6 +7013,7 @@ label {
   }
 
 }
+
 
 
 
